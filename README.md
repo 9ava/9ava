@@ -1,4 +1,9 @@
 ## Hi there 👋
+### My name is JOHN.
+
+> Today's weather is warm.
+
+
 
 <!--
 **9ava/9ava** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
