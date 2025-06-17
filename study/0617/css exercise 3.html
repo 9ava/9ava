@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- 3. 색상과 배경을 위한 스타일 연습문제
+목표: CSS를 사용하여 배경색, 텍스트 색상, 그라디언트 등을 적용합니다.
+
+문제:
+3-1 전체 페이지의 배경색을 하늘색으로 설정하세요.
+3-2 <header> 요소의 배경을 그라디언트로 설정하세요. (상단은 빨간색, 하단은 노란색으로 설정)
+3-3 본문 텍스트의 색을 검정색으로 설정하세요.
+3-4 이미지 삽입: 페이지에 배경 이미지를 삽입하고, 배경 크기는 화면에 맞게 조정하세요. -->
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 스타일 연습</title>
+    <style>
+        body {
+            background-color: lightblue;
+        color: black;
+    }
+
+        header {
+            background: linear-gradient(to bottom, red, yellow);
+        }
+
+        body { background-image: url('https://t3.ftcdn.net/jpg/04/02/69/30/360_F_402693093_wUcb6phCBVzLClX4gkvwSOt4k98lyvVk.jpg'); /* 배경 이미지 URL */
+            background-size: cover; /* 배경 크기를 화면에 맞게 조정 */    }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>웹 페이지 제목</h1>
+    </header>
+
+    <p>이것은 문단입니다.</p>
+</body>
+</html>
