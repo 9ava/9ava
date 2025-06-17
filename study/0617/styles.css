@@ -1,0 +1,21 @@
+ body{
+            background-color: yellow;
+       font-family: 'Courier New', Courier, monospace; }
+
+    h1{
+        color:blue;
+    }
+
+    h2 {
+        color: lightblue;
+        font-weight: 900; 
+    }
+    </style>
+    <body>
+        <h1 style="color: purple; font-size=50px">CSS 기본 문법</h1>
+        <h2 style="color: red; font-size=50px">인라인 스타일</h1>
+        <h2 style="color: red; font-size=50px">내부 스타일 시트</h1>
+        <h2 style="color: red; font-size=50px">외부 스타일시트</h1>
+        <h1 style="color: green; font-size=50px">CSS 기본 문법2</h1>
+        <h1 style="color: red; font-size=50px">CSS 기본 문법3</h1>
+    </body>
