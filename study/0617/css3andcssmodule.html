@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CSS3 and CSS MOdule</title>
-        <style>
-.css3 {
-    animation: css3 100s infinite alternate-reverse;
-}
+<head>
+  <title>CSS3 and CSS Module</title>
+  <style>
+    /* 애니메이션 */
+    .css3 {
+      animation: css3 10s infinite alternate-reverse;
+    }
 
-@keyframes css3{
-    from {
-        background-color: red;}
+    @keyframes css3 {
+      from {
+        background-color: red;
+      }
       to {
         background-color: yellow;
-      }  
-} {
-    
-}
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
+      }
+    }
 
-  transform: translate(100px, 50px) rotate(45deg) scale(1.5);
-  transform-origin: center;
-  transform-style: preserve-3d;
-}
+    /* 반응형 스타일 */
+    @media (max-width: 600px) {
+      .box {
+        background: linear-gradient(to right, lightgreen, green);
+        font-size: 20px;
+      }
+    }
 
-        </style>
-    </head>
-    <body>
-        <h1> CSS3 and CSS Module</h1>
-    <div class="css3 box">CSS3</div>
-    </body>
+    @media (min-width: 601px) and (max-width: 900px) {
+      .box {
+        background: linear-gradient(to right, lightcoral, tomato);
+        font-size: 30px;
+      }
+    }
+
+    @media (min-width: 901px) {
+      .box {
+        background: linear-gradient(to right, lightblue, navy);
+        font-size: 40px;
+      }
+    }
+
+    /* 박스 스타일 + 그라데이션 */
+    .box {
+      width: 300px;
+      height: 100px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+
+      transform: translate(100px, 50px) rotate(5deg) scale(1.1);
+      transform-origin: center;
+      transform-style: preserve-3d;
+
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS3 and CSS Module</h1>
+  <div class="css3 box"></div>
+</body>
 </html>
