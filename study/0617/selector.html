@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Selector</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+           h1,
+           h3 {color: red}
+           .subtitle {background-color: yellow;}
+
+           .card {
+               background-color: lightblue;
+               border: 1px solid black;
+               padding: 10px;
+               margin: 10px;
+           }
+
+          
+           #subsubtitle {
+               color: green;
+               font-size: 40px;
+           }
+
+
+            td {
+               border: 1px solid black;
+               padding: 5px;
+           }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        div>.card {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        </style>
+    </head>
+    <body>
+        <h1 style="font-size: 50px">CSS Selector1</h1>
+        <h2 style="color: red; font-size: 50px">CSS Selector2</h2>
+        <h3 id=subsubtitle>CSS Selector3</h3>
+        <h4 style="color: red; font-size: 50px">CSS Selector4</h4>
+        <h5 class="subtitle" >CSS Selector Example</h5>
+        <h6 id="subsubtitle">CSS Selector Example 2</h6>
+        
+<div class="card">
+            <h1>CSS Selector Example 1</h1>
+            <p>This is outer card.</p>
+            <table style="width: 500px; border: 1px solid black; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 100px">이름</td>
+                    <td style="width: 400px">
+                        <input type="text" name="name" placeholder="Enter your name">
+                    </td>
+                </tr>
+                 <tr>
+                    <td>E_mail</td>
+                    <td>
+                        <input type="text" name="email" placeholder="Enter your email">
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td>Message</td>
+                    <td><textarea name="Message" rows="8" cols=50; id=""></textarea></td>
+                </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>
+                        </table>
+</div>
+
+        <div class="card">
+            <h1>CSS Selector Example 2</h1>
+            <p>This is inner card.</p>
+            <table style="width: 500px; border: 1px solid black; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 100px" Name:>이름</td>
+                    <td style="width: 400px">
+                        <input type="text" name="name" placeholder="Enter your name">
+                    </td>
+                </tr>
+                 <tr>
+                    <td>E_mail</td>
+                    <td>
+                        <input type="text" name="email" placeholder="Enter your email">
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td>Message</td>
+                    <td><textarea name="Message" rows="8" cols=50; id=""></textarea></td>
+                </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>
+<button type="submit" style="
+    width: 300px; 
+    height: 50px; 
+    background-color: navy; 
+    color: white; 
+    font-family: 'Arial'; 
+    font-size: 18px; 
+    border:none;
+    border-radius: 10px;
+    ">
+  Submit
+</button>
+
+                    </td>
+                </tr>
+
+        
+            </table>
+
+        </div>
+</html>
