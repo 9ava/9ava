@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Layout</title>
+
+  <style>
+    body {
+      background-color: #f2f2f2;
+      margin: 4px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      display: flex;                /* Flexbox 사용 */
+      flex-direction: column;      /* ✅ 세로 방향 정렬 */
+      justify-content: ;     /* 수직 가운데 정렬 */
+      align-items: ;         /* 가로 가운데 정렬 */
+      height: 100vh;               /* 전체 높이 */
+      flex-wrap: wrap;
+      background-color: aqua;
+      width:300px;
+      height:400px;
+    }
+
+    .box1, .box2, .box3 {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .box1 { background-color: #FF5722; }
+    .box2 { background-color: #2196f3; }
+    .box3 { background-color: #4CAF50; }
+.box4, .box5, .box6 {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .box4 { background-color: #9C27B0; }
+    .box5 { background-color: #FFEB3B; }
+    .box6 { background-color: #FF9800; }
+
+    .box7, .box8, .box9, .box10 {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .box7 { background-color: #E91E63; }
+    .box8 { background-color: #00BCD4; }
+    .box9 { background-color: #CDDC39; }
+    .box10 { background-color: #607D8B; }  
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+  </div>
+</body>
+</html>
