@@ -1,0 +1,102 @@
+body {
+    background-color: #fffbe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cat {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #f9c4d2;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ear {
+    width: 40px;
+    height: 70px;
+    background-color: #f9c4d2;
+    position: absolute;
+    top: -30px;
+    border-radius: 30% 30% 0 0;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.ear.left {
+    left: 0;
+    transform: rotate(-40deg);
+}
+
+.ear.right {
+    right: 0;
+    transform: rotate(40deg);
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+}
+
+.eye.left {
+    left: 50px;
+    rotate: -20deg;
+}
+.eye.right {
+    right: 50px;
+}
+.nose {
+    width: 14px;
+      height: 14px;
+      background: brown;
+      border-radius: 50%;
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+}
+.mouth {
+    width: 40px;
+    height: 20px;
+    background-color:red;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 20px 20px;
+}
+.whiskers {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+.whiskers::before,
+.whiskers::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+}
+.whiskers::before {
+    left: -60px;
+    top: 0;
+}
+.whiskers::after {
+    right: -60px;
+    top: 0;
+}
