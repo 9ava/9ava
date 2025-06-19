@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 첫 웹 페이지</title>
+    <style>
+        header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 100px;
+            width: 100%;
+            height: 120px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* ✅ 세로 가운데 정렬 */
+            align-items: center;
+            /* ✅ 가로 가운데 정렬 */
+        }
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+        }
+
+        nav {
+            width: 200px;
+            background-color: #e9ecef;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 180px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px;
+            background-color: white;
+            color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        main {
+            flex: 1;
+            padding: 50px;
+            margin-left: 220px;
+            /* nav 너비 */
+            padding-top: 180px;
+            /* header 높이만큼 공간 확보 */
+        }
+
+
+        footer {
+            padding: 20px;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>나의 첫 웹 페이지</h1>
+        <p>이 페이지는 HTML과 CSS를 사용하여 만든 연습용 웹 페이지입니다.</p>
+        <p>웹 개발을 배우는 과정에서 연습용으로 만들었습니다.</p>
+    </header>
+    <nav>
+
+
+        <ul>
+            <li><a href="#home">홈</a></li>
+            <li><a href="#about">소개</a></li>
+            <li><a href="https://blog.naver.com/dangkimyaksa">블로그</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>나의 첫 웹 페이지</h1>
+        <p>안녕하세요! 이것은 나의 첫 번째 웹 페이지입니다.</p>
+        <p>웹 개발을 배우는 것은 정말 재미있습니다!</p>
+
+        <div class="about" id="about">
+            <h2>소개</h2>
+            <p>이 페이지는 HTML, CSS </p>
+            <p>웹 개발을 배우는 과정에서 연습용으로 만들었습니다.</p>
+        </div>
+        <article>
+            <h2>블로그 예시</h2>
+            <p>아래는 블로그 예시입니다:</p>
+            <iframe src="https://blog.naver.com/dangkimyaksa/223847799198" width="100%" height="600px"
+                style="border: none;">
+            </iframe>
+
+        </article>
+
+        <footer>
+            <p>이 페이지는 나의 첫 번째 웹 개발 연습입니다.</p>
+            <p>2025 © 나의 웹 개발 연습</p>
+        </footer>
+    </main>
+</body>
+
+</html>
