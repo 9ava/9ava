@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grid Seat</title>
+  <style>
+    body {
+      background-color: #fefefe;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .seat-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5칸 */
+      gap: 12px;
+      width: 500px;
+    }
+
+    .seat-button {
+      width: 100%;
+      aspect-ratio: 1 / 1;  /* 정사각형 버튼 */
+      font-size: 24px;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .seat-button:hover {
+      background-color: #cde;
+    }
+
+    .seat-button:active {
+      background-color: #88c;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="seat-grid">
+    <!-- 버튼 1 ~ 15 -->
+    <button class="seat-button">1</button>
+    <button class="seat-button">2</button>
+    <button class="seat-button">3</button>
+    <button class="seat-button">4</button>
+    <button class="seat-button">5</button>
+    <button class="seat-button">6</button>
+    <button class="seat-button">7</button>
+    <button class="seat-button">8</button>
+    <button class="seat-button">9</button>
+    <button class="seat-button">10</button>
+    <button class="seat-button">11</button>
+    <button class="seat-button">12</button>
+    <button class="seat-button">13</button>
+    <button class="seat-button">14</button>
+    <button class="seat-button">15</button>
+  </div>
+
+</body>
+</html>

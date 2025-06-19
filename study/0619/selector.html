@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 구조 예시</title>
+    <style>
+        div>p {
+            color: blue;
+            font-size: 20px;
+        }
+
+        section>p {
+            color: green;
+            font-size: 18px;
+        }
+
+        img[src^="image"] {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: lightgray;
+        }
+
+        /* 공백 제거: 요소 자체에 적용 */
+        p:hover {
+            color: red;
+            font-weight: bold;
+        }
+
+        p:focus {
+            outline: 2px solid orange;
+            background-color: yellow;
+        }
+
+        p:active {
+            color: purple;
+            font-style: italic;
+        }
+
+        /* nth-of-type으로 대체 */
+        p:nth-of-type(odd) {
+            background-color: red;
+        }
+
+        p:nth-of-type(even) {
+            background-color: blue;
+        }
+
+        p:first-child {
+            background-color: green;
+        }
+
+        p:last-child {
+            background-color: pink;
+        }
+
+        p:nth-child(3n+1) {
+            background-color: yellow;
+        }
+
+        div>p>strong {
+            color: orange;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1><strong>제목 강조</strong></h1>
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+        <div>
+            <p><strong>첫 번째 단락 강조</strong></p>
+            <p><strong>두 번째 단락 강조</strong></p>
+            <p><strong>세 번째 단락 강조</strong></p>
+            <p><strong>첫 번째 단락 강조</strong></p>
+            <p><strong>두 번째 단락 강조</strong></p>
+            <p><strong>세 번째 단락 강조</strong></p>
+            <input type="text" placeholder="여기에 입력하세요">
+        </div>
+
+        <p>This is a simple example of a DOM structure with a header and navigation links.</p>
+    </section>
+</body>
+
+</html>
