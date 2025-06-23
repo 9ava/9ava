@@ -1,0 +1,30 @@
+.container {
+    display: flex;               /* 가로 정렬 */
+    justify-content: center;     /* 가운데 정렬 */
+    align-items: center;         /* 수직 중앙 정렬 (선택 사항) */
+    gap: 20px;                   /* 과목 간 간격 */
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.subject {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+    text-align: center;
+}
+
+/* 공통 타이틀 스타일 */
+.title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* 각 과목별 색상 */
+.title1 { color: #2980b9; } /* 수학 */
+.title2 { color: #27ae60; } /* 과학 */
+.title3 { color: #e67e22; } /* 컴퓨터 */
+.title4 { color: #c0392b; } /* 미술 */
