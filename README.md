@@ -1,5 +1,3 @@
-![snake gif](https://github.com/아이디/아이디/blob/output/github-contribution-grid-snake.svg)
-
 # 📂 About Me - 김종건
 
 안녕하세요!  
@@ -67,6 +65,7 @@ Claude, Smithery, MCP 등과 Notion 연동 실습 진행
   <img src="https://github-readme-stats.vercel.app/api?username=9ava&show_icons=true&theme=radical" height="165">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=9ava&layout=compact&theme=radical" height="165">
 </p>
+![snake gif](https://github.com/9ava/9ava/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
