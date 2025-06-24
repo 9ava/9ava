@@ -6,7 +6,7 @@
 
 ---
 
-## 🛠️ 기술 스택
+## 🛠️ 학습 중인 기술 스택
 
 ### 💻 Web Development
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
