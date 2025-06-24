@@ -64,8 +64,8 @@ Claude, Smithery, MCP 등과 Notion 연동 실습 진행
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=9ava&show_icons=true&theme=radical" height="165">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=9ava&layout=compact&theme=radical" height="165">
+  ![snake gif](<img src="https://raw.githubusercontent.com/9ava/9ava/output/github-contribution-grid-snake.svg" alt="snake animation" />)
 </p>
-![snake gif](https://github.com/9ava/9ava/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
