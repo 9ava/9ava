@@ -64,7 +64,6 @@ Claude, Smithery, MCP 등과 Notion 연동 실습 진행
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=9ava&show_icons=true&theme=radical" height="165">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=9ava&layout=compact&theme=radical" height="165">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=9ava&theme=radical" height="165">
 </p>
 
 ---
