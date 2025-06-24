@@ -1,41 +1,78 @@
 # 📂 About Me - 김종건
 
-안녕하세요! 저는 약사로서의 전문성과 기술을 융합하여 헬스케어 및 IT 분야의 접점을 찾고 있는 **김종건**입니다.  
-현재는 프로그래밍과 웹 개발 역량을 키우며, 기술 기반의 창업 또는 프로젝트를 준비 중입니다.
+안녕하세요!  
+저는 **약사로서의 전문성**과 **프로그래밍 기술**을 융합하여 헬스케어와 IT의 접점을 찾고 있는 **김종건**입니다.  
+현재는 웹 개발 역량을 키우며, 기술 기반의 창업 및 프로젝트를 준비 중입니다.
 
 ---
 
-## 🛠️ 현재 배우고 있는 기술
+## 🛠️ 기술 스택
 
-- **웹 개발**: HTML, CSS, JavaScript  
-- **도구/플랫폼**: GitHub, VS Code, Notion, Figma  
-- **AI 연동**: ChatGPT, Claude, Smithery, MCP 등과 Notion 연동 실습  
-- **기타**: Git, GitHub 협업, GitHub Pages 정적 사이트 배포, Markdown 작성
+### 💻 Web Development
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+### ⚙️ Tools & Platforms
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+### 🤖 AI 연동
+![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)  
+Claude, Smithery, MCP 등과 Notion 연동 실습 진행
+
+### 🧰 기타 역량
+- Git / GitHub 협업
+- GitHub Pages를 활용한 정적 웹사이트 배포
+- Markdown 문서 작성 및 관리
 
 ---
 
-## 📚 학습 중인 프로젝트
+## 📚 현재 진행 중인 프로젝트
 
-- **웹 코딩 수업**: HTML/CSS 중심으로 수업 진행 및 과제 수행 중  
-- **웹 서비스 운영 준비**: 건강과 기술을 접목한 콘텐츠 기획 중
+- **웹 코딩 수업 수강 중**  
+  HTML/CSS 기반의 실습 과제 수행 중
+
+- **웹 서비스 기획 및 준비**  
+  약학+기술 융합 콘텐츠 제작 및 서비스 아이디어 구상
 
 ---
 
-## 🧩 관심 분야
+## 🎯 관심 분야
 
-- 약학 × 기술 융합 (예: 맞춤형 헬스케어 플랫폼)  
-- 생산성 도구 자동화 (예: Notion + AI)
+- 약학 × IT 융합 플랫폼 (예: 맞춤형 헬스케어, 복약 알림 등)
+- AI + Notion 기반 생산성 자동화
+- 기술 기반 창업 및 서비스 운영
 
 ---
 
 ## 📫 연락처
 
 - **이메일**: [kjg_0220@naver.com](mailto:kjg_0220@naver.com)  
-- **블로그**: [blog.naver.com/dangkimyaksa](https://blog.naver.com/dangkimyaksa)  
-- **GitHub**: [https://github.com/9ava](https://github.com/9ava)
+- **블로그**: [dangkimyaksa @ Naver Blog](https://blog.naver.com/dangkimyaksa)  
+- **GitHub**: [github.com/9ava](https://github.com/9ava)
 
-언제든 함께할 기회가 있다면 기쁘게 맞이하겠습니다. 새로운 도전과 배움을 늘 기다리고 있습니다. 😊
+> 함께할 기회가 있다면 언제든 환영입니다.  
+> **새로운 도전과 배움을 기다립니다.** 😊
 
 ---
 
-🗓️ **최종 수정일**: 2025년 6월 20일
+## 📊 GitHub 통계
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=9ava&show_icons=true&theme=radical" height="165">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=9ava&layout=compact&theme=radical" height="165">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=9ava&theme=radical" height="165">
+</p>
+
+---
+
+## 🧮 방문자 수
+
+![Visitor Count](https://profile-counter.glitch.me/9ava/count.svg)
+
+---
+
+📆 **최종 수정일**: 2025년 6월 24일

@@ -12,35 +12,42 @@
 </body>
 <script>
     // 함수 예제
-// function greet() {
-//     alert("반갑습니다!");
+    // function greet() {
+    //     parseFloat("반갑습니다!");
 
-// }
+    // }
 
-// greet();
+    // greet();
 
-// function showName() {
-//     let name = "홍길동";
-//     name = "이순신"
-//     console.log(name);
-// }
+    // function showName() {
+    //     let name = "홍길동";
+    //     name = "이순신"
+    //     console.log(name);
+    // }
 
-// showName();
+    // showName();
 
-// function add(a, b) {
-//     return a + b;
-// }
-// let sum = add(3, 5);
-// console.log(sum);
+    // function add(a, b) {
+    //     return a + b;
+    // }
+    // let sum = add(3, 5);
+    // console.log(sum);
 
-// 실습 예시: BMI 계산기
-//몸무게 / (키 * 키)
+    // 실습 예시: BMI 계산기
+    //몸무게 / (키 * 키)
 
-function calcBMI(w, h1, h2) {
-    return w / (h1*h2);
-let bmi = calcBMI(75, 1.75, 1.75);
-console.log(BMI);
-}
+    let h = parseFloat(prompt("키를 입력하세요.(m)"))
+    let w = parseFloat(prompt("몸무게를 입력하세요.(kg)"))
+
+    function calcBMI(w, h) {
+        return w / (h * h);
+    }
+    let bmi = calcBMI(w,h);
+    console.log(`당신의 BMI는 ${bmi.toFixed(2)}입니다.`);
+
+
+
+
 
 
 </script>
