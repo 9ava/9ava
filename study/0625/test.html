@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>테스트</title>
+</head>
+
+<body>
+    <script>
+        //초 변화에 따른 별 개수 변화
+        //    const t = new Date();
+        //     const s = t.getSeconds();
+        //     let stars = "";
+
+        //     for (i = 0; i<s; i++) { 
+        //         stars += "*" ;
+        //     }
+
+        //     console.log(stars)
+        //     console.log(`현재 초는 ${s}초 입니다.`)
+
+        // const letters = [
+        //     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+        //     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+        //     'U', 'V', 'W', 'X', 'Y', 'Z'
+        // ];
+
+        // setInterval(
+        //     () => {
+        //         const now = new Date();
+        //         const s = now.getSeconds();
+        //         const index = s % 26;
+        //         const letter = letters[index];
+
+        //         console.clear();  // 이전 출력 지우기
+        //         console.log(`현재 초: ${s} → 알파벳: ${letter}`);
+        //     }, 1000);
+
+
+        //약수의 합 연습
+            let divisors = [];
+            let sum = 0;
+        
+            let n = Number(prompt("숫자를 입력해주세요."))
+
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
+                divisors.push(i); sum += i;
+            }
+        }
+    
+
+
+        console.log(`${n}의 약수의 합은 ${sum}입니다. 약수는 ${divisors.join(" ," )}가 있습니다.`)
+    </script>
+</body>
+
+</html>
