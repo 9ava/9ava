@@ -183,22 +183,39 @@
 
 
     // 1. 본인의 정보를 담은 객체를 만들어 이름, 나이, 자기소개 () 메서드를 출력해보세요
-    const user = {
-        name: "김종건",
-        age: 37,
-        introduce: function () {
-            return `안녕하세요! 저는 ${this.name}이고, ${this.age}살입니다.`;
-        }
-    };
+    // const user = {
+    //     name: "김종건",
+    //     age: 37,  // ← 20 미만이면 미성년자로 판단
+    //     introduce: function () {
+    //         const status = this.age >= 20 ? "성인" : "미성년자";
+    //         return `안녕하세요! 저는 ${this.name}이고, ${this.age}살인 ${status}입니다.`;
+    //     }
+    // };
 
-    console.log(`이름: ${user.name}, 나이: ${user.age}`);
-    alert(`안녕하세요! 저는 ${user.name}이고, ${user.age}살입니다.`);
+    // console.log(user.introduce());
+    // alert(user.introduce());
 
 
-    // 2. 생성자 함수를 이요해 Book 객체 여러 개 만들어보기
+    // 2. 생성자 함수를 이용해 Book 객체 여러 개 만들어보기
+    function Book(title, author, price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+
+        this.introduce = function () {
+            return `"${this.title}"는 ${this.author} 작가의 책이며, 가격은 ${this.price}원입니다.`;
+        };
+    }
+
+    const book1 = new Book("어린왕자", "생텍쥐페리", 12000);
+    const book2 = new Book("자바스크립트 입문", "홍길동", 18000);
+    const book3 = new Book("불편한 편의점", "김호연", 15000);
+
+    console.log(book1.introduce());
+    console.log(book2.introduce());
+    console.log(book3.introduce());
+
+
     // 3. Date 객체를 활용해 
 </script>
-
-
-
 </html>

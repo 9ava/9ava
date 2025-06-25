@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+
+    <script>
+
+        //  문제 1. 정수 1<=n <=100 n줄에 걸쳐서 별 나타나게 
+        //  let stars = "";
+
+        // for (let i = 0; i <= 100; i++) {
+        //     stars += "*";
+        // }
+
+        // console.log(`${stars}`);
+
+        // 문제 2. 정수 n 주어졌을 때 n 줄에 걸쳐 오른쪽으로 정렬된 * 출력
+        //   const n = Number(prompt("숫자를 입력해주세요."));  // 사용자로부터 정수 입력
+        //   let stars = "";
+
+        //   for (let i = 1; i <= n; i++) {
+        //     let space = " ".repeat(n - i); // 앞쪽 공백
+        //     let star = "*".repeat(i);      // 별의 개수
+        //     stars += space + star + "\n";  // 줄 단위로 저장
+        //   }
+
+        //   console.log(stars);  // 콘솔창에 출력
+        //   alert(stars);        // alert로도 보여주기
+
+        //문제 3. 정수 n이 주어질 때 높이가 n인 피라미드 별을 출력하세요. 중앙 정렬된 별이 출력되어야 합니다. (홀수 개 별 출력)
+        const n = Number(prompt("숫자를 입력해주세요."));
+        let stars = "";
+
+        for (let i = 1; i <= n; i++) {
+            let spaces = " ".repeat(n - i);             // 왼쪽 공백
+            let starsInLine = "*".repeat(2 * i - 1);    // 홀수 개의 별
+            stars += spaces + starsInLine + "\n";
+        }
+
+        console.log(stars);
+
+    </script>
+
+</body>
+
+</html>
