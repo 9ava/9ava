@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="calculator">
+        <div id="display" class="display">0</div>
+        <div class="buttons">
+            <button id="clear">C</button>
+            <button id="backspace">←</button>
+            <button id="percent">%</button>
+            <button id="divide">/</button>
+
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="multiply">*</button>
+
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="subtract">-</button>
+
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="plus">+</button>
+
+            <button id="zero">0</button>
+            <button id="dot">.</button>
+            <button id="equal" class="equal">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+        let buttons = document.querySelectorAll("button");
+        let currentInput = "";
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const value = button.innerText;
+
+                if (value === "C") {
+                    currentInput = "";
+                    display.innerText = "0";
+                } else if (value === "←") {
+                    currentInput = currentInput.slice(0, -1);
+                    display.innerText = currentInput || "0";
+                } else if (value === "=") {
+                    try {
+                        currentInput = eval(currentInput).toString();
+                        display.innerText = currentInput;
+                    } catch {
+                        display.innerText = "Error";
+                        currentInput = "";
+                    }
+                } else {
+                    currentInput += value;
+                    display.innerText = currentInput;
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
