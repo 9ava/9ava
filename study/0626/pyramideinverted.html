@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>역방향 피라미드</title>
+</head>
+
+<body>
+
+    <script>
+        let n = Number(prompt("숫자를 입력해주세요."));
+
+            for (let i = n; i >= 1; i--) {
+                const stars = '*'.repeat(2 * i - 1);
+                const line = stars.padStart(n + i - 1); // 가운데 정렬
+                console.log(line);
+            }
+    </script>
+</body>
+
+</html>

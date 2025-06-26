@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DOM 연습 예제</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        input {
+            padding: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 6px 10px;
+            font-size: 14px;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 텍스트 출력 -->
+    <p id="text">안녕하세요!</p>
+
+    <!-- ✅ 처음엔 비어 있는 목록 -->
+    <ol id="list">
+        <!-- 시작 시 비어 있음 -->
+    </ol>
+
+    <!-- 입력창 & 버튼 -->
+    <input type="text" id="input" placeholder="목록에 추가할 항목 입력" />
+    <button id="add-button">추가</button>
+
+    <script>
+        const input = document.getElementById("input");
+        const addButton = document.getElementById("add-button");
+        const list = document.getElementById("list");
+
+        // 공통 함수: 입력값으로 <li> 추가
+        function addItem() {
+            const value = input.value.trim();
+            if (value !== "") {
+                const li = document.createElement("li");
+                li.innerText = value;
+                list.appendChild(li);
+                input.value = "";
+            }
+        }
+
+        // 버튼 클릭 시
+        addButton.addEventListener("click", addItem);
+
+        // Enter 키 입력 시
+        input.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                addItem();
+            }
+        });
+    </script>
+</body>
+
+</html>

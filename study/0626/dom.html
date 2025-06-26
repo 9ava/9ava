@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>이미지 바꾸기 & 색상 바꾸기</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .active {
+            outline: 3px solid gold;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+            transform: scale(1.05);
+        }
+
+        .fancy-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .fancy-button:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+        }
+
+        .fancy-button:active {
+            transform: scale(0.95);
+            box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="greeting">안녕하세요</h2>
+    <img src="https://picsum.photos/300/200" alt="랜덤 이미지">
+    <br>
+    <button id="change-image">이미지 바꾸기</button>
+    <button id="change-color">색상 바꾸기</button>
+    <button id="move-element">요소 이동 버튼</button>
+    <button id="remove-element">요소 삭제 버튼</button>
+
+    <div id="box" class="box"></div>
+
+    <div id="element-container"></div>
+
+    <script>
+        // 텍스트 변경
+        document.getElementById("greeting").innerText = "Hello World";
+
+        // 이미지 바꾸기
+        const image = document.getElementsByTagName("img");
+        document.getElementById("change-image").addEventListener("click", function () {
+            image[0].src = "https://picsum.photos/seed/" + Math.random() + "/400/300";
+        });
+
+        // 색상 바꾸기
+        const box = document.getElementById("box");
+        document.getElementById("change-color").addEventListener("click", function () {
+            box.classList.toggle("blue");
+            box.classList.add("active");
+        });
+
+        // 마우스 오버 시 active 추가/제거
+        document.getElementById("change-image").addEventListener("mouseover", () => box.classList.add("active"));
+        document.getElementById("change-image").addEventListener("mouseout", () => box.classList.remove("active"));
+
+        // 요소 추가 fancy 버튼
+        const elementContainer = document.getElementById("element-container");
+        const addButton = document.createElement("button");
+        addButton.innerText = "✨ 요소 추가";
+        addButton.classList.add("fancy-button");
+
+        // 클릭 시 새 요소 추가
+        addButton.addEventListener("click", () => {
+            const newP = document.createElement("p");
+            const now = new Date().toLocaleString(); // 날짜 문자열
+            newP.innerText = "📦 새로운 요소가 추가되었습니다! (" + now + ")";
+            newP.style.marginTop = "10px";
+            elementContainer.appendChild(newP);
+        });
+        elementContainer.appendChild(addButton);
+
+        // 요소 이동 버튼
+        const moveElementButton = document.getElementById("move-element");
+        moveElementButton.addEventListener("click", function () {
+            const body = document.getElementsByTagName("body")[0];
+            body.insertBefore(box, body.firstChild); // box를 맨 위로 이동
+        });
+
+        // 요소 삭제 버튼
+        const removeElementButton = document.getElementById("remove-element");
+        removeElementButton.addEventListener("click", function () {
+            // elementContainer에 마지막으로 추가된 요소 제거
+            const children = elementContainer.querySelectorAll("p");
+            if (children.length > 0) {
+                elementContainer.removeChild(children[children.length - 1]);
+            } else {
+                alert("삭제할 요소가 없습니다!");
+            }
+        });
+    </script>
+</body>
+
+</html>
