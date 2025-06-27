@@ -1,0 +1,107 @@
+/* 전체 배경 */
+body {
+    background-color: #e0f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 아이폰 앱 같은 화면 프레임 */
+.app-container {
+    background-color: #ffffff;
+    width: 360px;
+    height: 640px;
+    border-radius: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+/* 상태바 느낌 (상단 노치 자리) */
+.status-bar {
+    width: 100%;
+    height: 24px;
+    background-color: #000;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* 제목 */
+h1 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #2a9d8f;
+}
+
+/* 점수 */
+#score {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* 버튼 */
+button {
+    padding: 8px 16px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #227368;
+}
+
+/* 게임보드 */
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+/* 구멍 */
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 두더지 */
+.mole {
+    width: 80px;
+    height: 80px;
+    background-image: url("https://emojicdn.elk.sh/🐹");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: popUp 0.2s ease-out;
+}
+
+@keyframes popUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
