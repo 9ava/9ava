@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BOM 객체</title>
+</head>
+
+<body>
+    <button onclick="openPopup()">네이버 팝업 열기</button>
+    <button onclick="history.back()">뒤로 가기 </button>
+    <button onclick="history.forward()">앞으로 가기 </button>
+    <button onclick="goBackByUserInput()">임의 페이지 뒤로 가기</button>
+
+    <script>
+        // function openPopup() {
+        //     window.open("https://www.naver.com", "popup", "width=400,height=400,left=200,top=200");
+        // }
+
+        // setTimeout(openPopup, 2000);
+
+        // setInterval(openPopup, 2000);
+
+        //Navigator
+        console.log(navigator.userAgent);
+        console.log(navigator.language);
+        console.log(navigator.platform);
+        console.log(navigator.appVersion);
+        console.log(navigator.geolocation);
+
+        //Location
+        console.log(location.href);
+        console.log(location);
+
+        // if(confirm("구글로 이동할까요?")) {
+        //     location.href = "https://www.google.com";
+        // } else {
+        //     location.href = "https://www.naver.com";
+        // }
+
+        // console.log("화면 너비:", screen.width);
+        // console.log("화면 높이:", screen.height);
+        // console.log(screen);
+
+        // History
+        function autoMovepage() {
+            setTimeout(function () {
+                location.href = "https://www.daum.net"
+            }, 3000);
+        }
+
+
+        function goBackByUserInput() {
+            const count = prompt("몇 페이지 뒤로 가시겠습니까?");
+            const n = parseInt(count);
+
+            if (!isNaN(n) && n > 0) {
+                history.go(-n); // 음수로 이동해야 뒤로 감
+            } else {
+                alert("올바른 숫자를 입력하세요.");
+            }
+        }
+
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+                        console.log("위도:", latitude);
+                        console.log("경도:", longitude);
+                    },
+                    function (error) {
+                        console.error("위치 정보를 가져올 수 없습니다:", error.message);
+                    }
+                );
+            } else {
+                console.log("이 브라우저에서는 Geolocation을 지원하지 않습니다.");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

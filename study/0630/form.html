@@ -125,15 +125,37 @@
         <button>제출</button>
     </form>
 
-    <script>
-        const form = document.getElementById("myForm");
-        form.addEventListener("submit", function (e) {
-            if (!form.checkValidity()) {
-                e.preventDefault(); // 유효성 통과 못하면 제출 막기
-                alert("필드를 올바르게 입력하세요.");
+    <h3>미리보기:</h3>
+    <p id="preview">여기에 이름이 표시됩니다</p>
+
+    <div id="preview">
+        <p id="preview_username"></p>
+        <p id="preview_email"></p>
+
+
+        <script>
+            const form = document.getElementById("myForm");
+            form.addEventListener("submit", function (e) {
+                if (!form.checkValidity()) {
+                    e.preventDefault(); // 유효성 통과 못하면 제출 막기
+                    alert("필드를 올바르게 입력하세요.");
+                }
+            });
+
+            const input = document.getElementById("userName");
+            const preview = document.getElementById("preview");
+
+            input.addEventListener("input", () => {
+                preview.textContent = input.value || "여기에 이름이 표시됩니다";
+            });
+
+            function preview() {
+                preview_username = document.getElementById("username").value;
+                preview_username = document.getElementById("email").value;
+
             }
-        });
-    </script>
+
+        </script>
 </body>
 
 </html>
