@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 검증</title>
+</head>
+
+<body>
+    <input id="orderName" type="text" placeholder="주문자 이름" />
+    <input id="shipName" type="text" placeholder="수령인 이름" />
+    <label><input id="same" type="checkbox" onclick="copyName()" /> 주문자와 동일</label>
+
+    <br /><br />
+
+    <form onsubmit="return validateForm();">
+        <input id="userName" type="text" placeholder="이름" />
+        <input id="userAge" type="number" placeholder="나이" />
+
+        <br /><br />
+
+        <input id="male" type="radio" name="gender" value="남자" />
+        <label for="male">남자</label>
+        <input id="female" type="radio" name="gender" value="여자" />
+        <label for="female">여자</label>
+
+        <br /><br />
+
+        <input type="submit" value="제출" />
+    </form>
+
+
+    <form id="signupForm">
+        <input type="text" id="username" placeholder="이름 입력"><br>
+        <input type="email" id="email" placeholder="이메일 입력"><br>
+        <input type="password" id="password" placeholder="비밀번호 입력"><br>
+        <input type="password" id="confirmPassword" placeholder="비밀번호 확인"><br>
+        <button type="submit">가입</button>
+    </form>
+    <script>
+        function copyName() {
+            if (document.getElementById("same").checked) {
+                document.getElementById("shipName").value =
+                    document.getElementById("orderName").value;
+            } else {
+                document.getElementById("shipName").value = "";
+            }
+        }
+
+        function validateForm() {
+            let name = document.getElementById("userName").value;
+            let age = document.getElementById("userAge").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+
+            if (name.trim() === "") {
+                alert("이름을 입력하세요.");
+                return false;
+            }
+
+            if (isNaN(age) || age < 1) {
+                alert("나이를 올바르게 입력하세요.");
+                return false;
+            }
+
+            if (!gender) {
+                alert("성별을 선택하세요.");
+                return false;
+            }
+
+            alert("폼이 정상적으로 제출됩니다.\n성별: " + gender.value);
+            return true;
+        }
+
+        // 선택된 성별만 확인하는 단독 함수 (사용자 정의 이벤트로 연결 가능)
+        function validateGender() {
+            const selected = document.querySelector('input[name="gender"]:checked');
+            if (selected) {
+                alert("선택된 성별: " + selected.value);
+            } else {
+                alert("성별이 선택되지 않았습니다.");
+            }
+        }
+
+        function validateCountry() {
+            let country = document.getElementById("country")
+        }
+
+
+        document.getElementById("signupForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // 폼 제출 막기
+
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (!username) {
+                alert("이름을 입력하세요.");
+                return;
+            }
+
+            const emailRegex = /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                alert("올바른 이메일을 입력하세요.");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("비밀번호는 8자 이상이어야 합니다.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("비밀번호가 일치하지 않습니다.");
+                return;
+            }
+
+            alert("회원가입 성공!");
+            // 이곳에 실제 서버 전송 코드를 추가
+        });
+    </script>
+    <form id="myForm">
+        <input type="email" required>
+        <button>제출</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit", function (e) {
+            if (!form.checkValidity()) {
+                e.preventDefault(); // 유효성 통과 못하면 제출 막기
+                alert("필드를 올바르게 입력하세요.");
+            }
+        });
+    </script>
+</body>
+
+</html>
