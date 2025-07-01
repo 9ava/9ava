@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "ts-node hello.ts",
+    "start": "ts-node index.ts",
     "build": "tsc"
   },
   "devDependencies": {
