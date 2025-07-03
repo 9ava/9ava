@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>약봉투 OCR - Tesseract.js</title>
+    <script src="https://unpkg.com/tesseract.js@v4.0.2/dist/tesseract.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2em;
+      }
+      #output {
+        white-space: pre-wrap;
+        border: 1px solid #ccc;
+        padding: 1em;
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>💊 약봉투 OCR (Tesseract.js)</h1>
+    <input type="file" id="imageInput" accept="image/*" />
+    <button onclick="startOCR()">텍스트 추출하기</button>
+    <div id="output">추출된 텍스트가 여기에 표시됩니다...</div>
+
+    <script>
+      function startOCR() {
+        const file = document.getElementById("imageInput").files[0];
+        if (!file) {
+          alert("이미지를 먼저 선택해주세요.");
+          return;
+        }
+
+        document.getElementById("output").innerText =
+          "인식 중... 잠시만 기다려주세요.";
+
+        Tesseract.recognize(file, "kor+eng", {
+          logger: (m) => console.log(m),
+        })
+          .then(({ data: { text } }) => {
+            document.getElementById("output").innerText = text;
+          })
+          .catch((err) => {
+            console.error(err);
+            document.getElementById("output").innerText = "에러 발생: " + err;
+          });
+      }
+    </script>
+  </body>
+</html>
