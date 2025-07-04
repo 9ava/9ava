@@ -12,6 +12,7 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### ⚙️ Tools & Platforms
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -20,8 +21,10 @@
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 ### 🤖 AI 연동
-![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)  
-Claude, Smithery, MCP 등과 Notion 연동 실습 진행
+![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
+![GitHub Copilot](https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&logo=github-copilot&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/google%20gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white)
+</br> Claude, Smithery MCP를 이용한 Notion, github 연동 실습
 
 ### 🧰 기타 역량
 - Git / GitHub 협업
@@ -33,11 +36,12 @@ Claude, Smithery, MCP 등과 Notion 연동 실습 진행
 ## 📚 현재 진행 중인 프로젝트
 
 - **웹 코딩 수업 수강 중**  
-  HTML/CSS 기반의 실습 과제 수행 중
+  HTML/CSS/JavaScript/TypeScript를 중심으로 한 웹 개발 기초 학습
+
 
 - **웹 서비스 기획 및 준비**  
-  약학+기술 융합 콘텐츠 제작 및 서비스 아이디어 구상
-
+   약학 지식과 IT 기술을 융합한 콘텐츠 및 서비스 구상
+   예: 약물 정보 기반 OCR 서비스
 ---
 
 ## 🎯 관심 분야
@@ -77,4 +81,4 @@ Claude, Smithery, MCP 등과 Notion 연동 실습 진행
 
 ---
 
-📆 **최종 수정일**: 2025년 6월 24일
+📆 **최종 수정일**: 2025년 7월 4일
