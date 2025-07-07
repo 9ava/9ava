@@ -79,6 +79,15 @@
 
 ![Visitor Count](https://profile-counter.glitch.me/9ava/count.svg)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/9ava/9ava/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/9ava/9ava/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/9ava/9ava/output/pacman-contribution-graph.svg">
+</picture>
+
+###
+
+###
 ---
 
 📆 **최종 수정일**: 2025년 7월 4일
