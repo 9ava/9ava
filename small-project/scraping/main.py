@@ -16,7 +16,7 @@ def get_latest_recall():
         "serviceKey": SERVICE_KEY,
         "pageNo": "1",
         "numOfRows": "1",
-        "_type": "json"  # 반드시 넣어야 JSON 응답됨
+        "_type": "json"  
     }
     with httpx.Client(verify=False) as client:
         res = client.get(API_ENDPOINT, params=params)
