@@ -29,3 +29,10 @@ console.log(`found=>${found}`);
 
 const filter = nums.filter((n) => n > 2);
 console.log(`filter=>${filter}`);
+
+const nested = [1, 2, 3];
+const duplicated = nested.flatMap((n) => [n, n]);
+
+for (let nested of duplicated) {
+  console.log(`nested => ${nested}`);
+}
