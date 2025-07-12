@@ -1,30 +1,17 @@
-import os
-import json
-import subprocess
-from dotenv import load_dotenv
+import requests
 
-load_dotenv()
+url = "https://apis.data.go.kr/1611000/BldRtltrRcvStatsService/getPreSaleTradeStats"
+params = {
+    'serviceKey': 'db3aa3d088664d1c84dcfa678b35cf3a',
+    'LAWD_CD': '11',
+    'DEAL_YMD': '202405',
+    'numOfRows': '10',
+    'pageNo': '1',
+    '_type': 'json'
+}
 
-SERVICE_KEY = os.getenv("SERVICE_KEY")
+response = requests.get(url, params=params)
+data = response.json()
 
-API_URL = f"https://apis.data.go.kr/1471000/MdcinRtrvlSleStpgeInfoService04?serviceKey={SERVICE_KEY}&pageNo=1&numOfRows=1&_type=json"
-
-def get_latest_recall():
-    try:
-        result = subprocess.check_output(["curl", "-s", API_URL])
-        data = json.loads(result.decode("utf-8"))
-        items = data.get("response", {}).get("body", {}).get("items", [])
-        if items:
-            return items[0]
-        return None
-    except Exception as e:
-        print("❌ API 호출 실패:", e)
-        return None
-
-# 실행
-recall = get_latest_recall()
-if recall:
-    print("✅ 회수 정보:")
-    print(json.dumps(recall, indent=2, ensure_ascii=False))
-else:
-    print("❌ 회수 정보 없음")
+for item in data['response']['body']['items']['item']:
+    print(f"{item['SIDO_NM']} {item['SGG_NM']} - {item['DEAL_CNT']}건")
