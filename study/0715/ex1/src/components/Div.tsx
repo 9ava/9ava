@@ -31,6 +31,6 @@ export const Div: FC<DivProps> = ({
     left, right, top, bottom,
     minWidth, maxWidth, minHeight, maxHeight
   }
-  const className = ['box-border', src && 'bg-gray-300', _className].join(' ')
+  const className = ['box-border', src && 'bg-cover bg-center', _className].join(' ')
   return <div {...props} className={className} style={style} />
 }
