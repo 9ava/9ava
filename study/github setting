@@ -1,0 +1,13 @@
+# mkdir my-first-repo
+# cd my-first-repo
+# git init
+# git config --global user.name "학생이름"
+# git config --global user.email "학생이메일@example.com"
+# touch index.html
+
+# echo "<h1>Hello Git</h1>" > index.html
+# git status
+# git add index.html
+# git commit -m "처음 커밋"
+# git log --oneline
+# q (종료 버튼)
