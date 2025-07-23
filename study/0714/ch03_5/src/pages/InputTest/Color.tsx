@@ -1,9 +1,9 @@
-import { Input } from "../../theme/daisyui";
+import {Input} from '../../theme/daisyui'
 
 export default function Color() {
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center">Color</h2>
+      <h2 className="font-bold text-5xl text-center">Color</h2>
       <div className="flex flex-col p-4 mt-4">
         <div>
           <label className="label">input-primary</label>
@@ -35,5 +35,5 @@ export default function Color() {
         </div>
       </div>
     </section>
-  );
+  )
 }

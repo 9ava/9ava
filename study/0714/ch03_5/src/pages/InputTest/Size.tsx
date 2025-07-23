@@ -1,9 +1,9 @@
-import { Input } from "../../theme/daisyui";
+import {Input} from '../../theme/daisyui'
 
 export default function Size() {
   return (
     <section className="mt-4">
-      <h2 className="text-3xl font-bold text-center">Size</h2>
+      <h2 className="font-bold text-3xl text-center">Size</h2>
       <div className="flex p-4 mt-4 justify-evenly">
         <div>
           <label className="label">input-lg</label>
@@ -23,5 +23,5 @@ export default function Size() {
         </div>
       </div>
     </section>
-  );
+  )
 }

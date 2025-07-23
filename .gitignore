@@ -1,5 +1,4 @@
 **/node_modules/*
 .gemini/
 **/build/*
-ch01_5/
 .env/
