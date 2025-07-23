@@ -11,3 +11,7 @@
 # git commit -m "처음 커밋"
 # git log --oneline
 # q (종료 버튼)
+
+# git  diff
+# echo "추가 내용" >> index.html
+# git restore index.html ; 복구 
