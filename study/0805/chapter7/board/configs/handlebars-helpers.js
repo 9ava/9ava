@@ -1,5 +1,3 @@
-// configs/handlebars-helpers.js
-
 module.exports = {
   dateTimeString: (isoString) => {
     if (!isoString) return "날짜 없음";

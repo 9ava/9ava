@@ -1,6 +1,6 @@
 const { ObjectId } = require("mongodb");
+const paginate = require("../utils/paginator");
 
-// 📄 글 목록 조회
 async function list(collection, page = 1, search = "") {
   const PAGE_SIZE = 10;
   const query = search
@@ -15,11 +15,8 @@ async function list(collection, page = 1, search = "") {
     .limit(PAGE_SIZE)
     .toArray();
 
-  const paginator = {
-    page,
-    totalPages: Math.ceil(total / PAGE_SIZE),
-    totalPosts: total,
-  };
+  // ✅ 유틸 함수 호출로 pageList 포함한 객체 생성
+  const paginator = paginate({ totalCount: total, page, perPage: PAGE_SIZE });
 
   return [posts, paginator];
 }

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 mongoose.set("strictQuery", false);
-const uri =
-  "mongodb+srv://zudrion:<db_password>@cluster0.phbjgmj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/board?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URL;
 
 module.exports = function () {
   return mongoose.connect(uri, { useNewUrlParser: true });
