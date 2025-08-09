@@ -27,6 +27,7 @@
 </br> Claude, Smithery MCP를 이용한 Notion, github 연동 실습
 
 ### 🧰 기타 역량
+[![AWS Certified Cloud Practitioner](https://images.credly.com/size/100x100/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png)](https://www.credly.com/badges/1d2e3bf4-1011-4fd0-82a8-c0190a697645/public_url)
 - Git / GitHub 협업
 - GitHub Pages를 활용한 정적 웹사이트 배포
 - Markdown 문서 작성 및 관리
@@ -78,4 +79,4 @@
 ###
 ---
 
-📆 **최종 수정일**: 2025년 7월 4일
+📆 **최종 수정일**: 2025년 8월 9일
