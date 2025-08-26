@@ -1,0 +1,23 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: tmdgenaistudents06
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: aws-node
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: aws-node
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-2   # 예시: 서울
+  profile: students06
+
+
+  deploymentBucket: 
+    name: tmd-genai1-students06
+    blockPublicAccess: true
+    serverSideEncryption: AES256
+
+
+functions:
+  hello:
+    handler: handler.hello
