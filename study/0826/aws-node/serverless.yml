@@ -11,12 +11,10 @@ provider:
   region: ap-northeast-2   # 예시: 서울
   profile: students06
 
-
   deploymentBucket: 
     name: tmd-genai1-students06
     blockPublicAccess: true
     serverSideEncryption: AES256
-
 
 functions:
   hello:

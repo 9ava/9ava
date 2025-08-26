@@ -1,0 +1,75 @@
+org: tmdgenaistudents06
+app: photo-optimizer-students06
+service: picture-optimizer-students06
+
+# 공통 변수 (stage 한 곳에서 관리)
+custom:
+  stage: ${opt:stage, 'dev'}
+  sourceBucket: ${self:service}-${self:custom.stage}-source
+  destBucket:   ${self:service}-${self:custom.stage}-optimized
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-2
+  profile: students06
+  stage: ${self:custom.stage}
+
+  # 모든 함수 기본 설정
+  memorySize: 1024
+  timeout: 10
+
+  # Serverless 배포 버킷(이미 존재하는 버킷 사용)
+  deploymentBucket:
+    name: tmd-genai1-students06
+    blockPublicAccess: true
+    serverSideEncryption: AES256
+
+  # Lambda 환경변수
+  environment:
+    SOURCE_BUCKET: ${self:custom.sourceBucket}
+    DEST_BUCKET:   ${self:custom.destBucket}
+
+  # 최소 권한 (소스 읽기, 결과 쓰기)
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:GetObject
+            - s3:ListBucket
+          Resource:
+            - arn:aws:s3:::${self:custom.sourceBucket}
+            - arn:aws:s3:::${self:custom.sourceBucket}/*
+        - Effect: Allow
+          Action:
+            - s3:PutObject
+            - s3:ListBucket
+            - s3:PutObjectAcl
+          Resource:
+            - arn:aws:s3:::${self:custom.destBucket}
+            - arn:aws:s3:::${self:custom.destBucket}/*
+
+functions:
+  optimizer:
+    handler: handler.optimizer
+    events:
+      - s3:
+          bucket: ${self:custom.sourceBucket}   # 소스 버킷(이벤트로 생성/관리)
+          event: s3:ObjectCreated:*             # rules 미지정 = 모든 생성 이벤트
+
+resources:
+  Resources:
+    DestBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.destBucket}
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
+        BucketEncryption:
+          ServerSideEncryptionConfiguration:
+            - ServerSideEncryptionByDefault:
+                SSEAlgorithm: AES256
