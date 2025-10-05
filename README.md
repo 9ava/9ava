@@ -6,7 +6,7 @@
 
 ---
 
-## 🛠️ 학습 중인 기술 스택
+## 🛠️ 기술 스택
 
 ### 💻 Web Development
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -31,18 +31,8 @@
 - Git / GitHub 협업
 - GitHub Pages를 활용한 정적 웹사이트 배포
 - Markdown 문서 작성 및 관리
-
----
-
-## 📚 현재 진행 중인 프로젝트
-
-- **웹 코딩 수업 수강 중**  
-  HTML/CSS/JavaScript/TypeScript를 중심으로 한 웹 개발 기초 학습
-
-
-- **웹 서비스 기획 및 준비**  
-   약학 지식과 IT 기술을 융합한 콘텐츠 및 서비스 구상
-   </br> 예: 약물 정보 기반 OCR 서비스
+<p>
+- 2025 강남구 혁신인재육성 아카데미 'GenAI 기반 웹 서비스 개발 전문가 과정' 수료 </p>
 ---
 
 ## 🎯 관심 분야
@@ -79,4 +69,4 @@
 ###
 ---
 
-📆 **최종 수정일**: 2025년 8월 9일
+📆 **최종 수정일**: 2025년 10월 5일
