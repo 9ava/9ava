@@ -14,5 +14,9 @@ build/
 \n# 면접 질문 파일\n개발자면접대비_예상문제.md
 개발자면접대비_예상문제.md
 
+# toy project 제외
+toy-project/bongtu_OCR/
+toy-project/scraping/
+
 # 기타
 .claude/
